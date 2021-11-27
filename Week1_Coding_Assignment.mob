@@ -1,1 +1,2226 @@
-{"__filetype__":"mobius","name":"Week 1 - Undulating Wall","author":"kichapps","flowchart":{"id":"be8ea504-aca4-84a1-914a-11dc45b2b7fc","name":"Week 1 - Undulating Wall","description":"","language":"js","meta":{"selected_nodes":[0]},"nodes":[{"name":"Start","id":"node_nucobgh08lm","position":{"x":5340,"y":5000},"enabled":true,"type":"start","procedure":[{"type":13,"ID":"main_blank","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":10,"ID":"parameters_blank","meta":{"description":"","inputMode":5,"module":"ParamBlank","name":"Constant"},"argCount":0,"args":[],"print":false,"enabled":false,"terminate":false}],"localFunc":[{"type":13,"ID":"local_func_blank","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false}],"state":{"procedure":[],"show_code":false,"show_func":false,"hasExecuted":true},"input":{"name":"input","type":0,"edges":[],"meta":{"mode":0,"opts":{}},"parentNode":"~flowchart~nodes~0"},"output":{"name":"output","type":1,"edges":[{"source":"~flowchart~nodes~0~output","target":{"name":"input","type":0,"edges":["~flowchart~nodes~0~output~edges~0"],"meta":{"mode":0,"opts":{}},"parentNode":{"name":"Node","id":"node_4zhyp80sjlx","position":{"x":5340,"y":5200},"enabled":true,"type":"","procedure":[{"type":13,"ID":"main_blank","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":0,"ID":"prod-2939xenzv4s","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"resolution","jsValue":"resolution_"},{"name":"value","value":"20","usedVars":[],"jsValue":"20"}],"variable":["resolution"]},{"type":0,"ID":"prod-3o07rs48m3i","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"radius","jsValue":"radius_"},{"name":"value","value":"50","usedVars":[],"jsValue":"50"}],"variable":["radius"]},{"type":8,"ID":"prod-e4h9a25kvj4","enabled":false,"print":false,"meta":{"module":"pattern","name":"Arc"},"argCount":6,"args":[{"name":"var_name","value":"arc0","jsValue":"arc0_"},{"name":"__model__"},{"name":"origin","value":"[0, 0, 0]","usedVars":[],"jsValue":"[0, 0, 0]"},{"name":"radius","value":"radius","usedVars":["radius"],"jsValue":"radius_"},{"name":"num_positions","value":"resolution","usedVars":["resolution"],"jsValue":"resolution_"},{"name":"arc_angle","value":"PI / 2","usedVars":[],"jsValue":"JSON.parse(JSON.stringify(PI)) / 2"}],"variable":["arc0"]},{"type":8,"ID":"prod-3hsh0vc8g93","enabled":true,"print":false,"meta":{"module":"pattern","name":"Arc"},"argCount":6,"args":[{"name":"var_name","value":"arc","jsValue":"arc_"},{"name":"__model__"},{"name":"origin","value":"[0, 0, 0]","usedVars":[],"jsValue":"[0, 0, 0]"},{"name":"radius","value":"radius","usedVars":["radius"],"jsValue":"radius_"},{"name":"num_positions","value":"resolution","usedVars":["resolution"],"jsValue":"resolution_"},{"name":"arc_angle","value":"PI / 2","usedVars":[],"jsValue":"JSON.parse(JSON.stringify(PI)) / 2"}],"variable":["arc"],"selectGeom":false},{"type":0,"ID":"prod-2hy1udqjiqu","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"num_und","jsValue":"num_und_"},{"name":"value","value":"4","usedVars":[],"jsValue":"4"}],"variable":["num_und"]},{"type":0,"ID":"prod-3hjxhekq90n","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"und_depth","jsValue":"und_depth_"},{"name":"value","value":"3","usedVars":[],"jsValue":"3"}],"variable":["und_depth"]},{"type":4,"ID":"prod-8g1t1zrgnqd","enabled":true,"print":false,"argCount":2,"args":[{"name":"item","value":"point","jsValue":"point_"},{"name":"list","value":"arc","usedVars":["arc"],"jsValue":"arc_"}],"children":[{"type":13,"ID":"prod-rhyqkzhs0u","parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":8,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7","ID":"prod-a08njzsdpwj","enabled":true,"print":false,"meta":{"module":"attrib","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"coord","jsValue":"coord_"},{"name":"__model__"},{"name":"entities","value":"point","usedVars":["point"],"jsValue":"point_"},{"name":"attrib","value":"\"xyz\"","usedVars":[],"jsValue":"\"xyz\""}],"variable":["coord"]},{"type":0,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7","ID":"prod-x4st2v1duv","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"origin","jsValue":"origin_"},{"name":"value","value":"[0, 0, 0]","usedVars":[],"jsValue":"[0, 0, 0]"}],"variable":["origin"]},{"type":0,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7","ID":"prod-d5nh3t3lo8r","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"ray","jsValue":"ray_"},{"name":"value","value":"rayMake(origin, coord, 50)","usedVars":["coord","origin"],"jsValue":"rayMake(__debug__, origin_, coord_, 50)"}],"variable":["ray"],"selectGeom":false},{"type":0,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7","ID":"prod-2claygovskk","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"angle","jsValue":"angle_"},{"name":"value","value":"acos(vecDot([1, 0, 0], vecNorm(coord))) * 180 / PI","usedVars":["coord"],"jsValue":"acos(__debug__, vecDot(__debug__, [1, 0, 0], vecNorm(__debug__, coord_))) * 180 / JSON.parse(JSON.stringify(PI))"}],"variable":["angle"]},{"type":18,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7","ID":"prod-qf9tzi5f1f","enabled":true,"print":false,"argCount":4,"meta":{"module":"localFunc","name":"GetOffset","otherInfo":{}},"args":[{"name":"var_name","value":"displacement","jsValue":"displacement_"},{"name":"angle","value":"angle","jsValue":"angle_","usedVars":["angle"]},{"name":"num_und","value":"num_und","jsValue":"num_und_","usedVars":["num_und"]},{"name":"und_depth","value":"und_depth","jsValue":"und_depth_","usedVars":["und_depth"]}],"variable":["displacement"]},{"type":0,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7","ID":"prod-n2uz8q92wnq","enabled":false,"print":true,"argCount":2,"args":[{"name":"var_name","value":"blah","jsValue":"blah_"},{"name":"value","value":"vecMult(vecNorm(vecFromTo(origin, coord)), displacement)","usedVars":["coord","origin","displacement"],"jsValue":"vecMult(__debug__, vecNorm(__debug__, vecFromTo(__debug__, origin_, coord_)), displacement_)"}],"variable":["blah"]},{"type":8,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7","ID":"prod-7yr2q4zp4xa","enabled":true,"print":false,"meta":{"module":"modify","name":"Move"},"argCount":4,"args":[{"name":"__none__"},{"name":"__model__"},{"name":"entities","value":"point","usedVars":["point"],"jsValue":"point_"},{"name":"vectors","value":"vecMult(vecNorm(vecFromTo(origin, coord)), displacement)","usedVars":["coord","origin","displacement"],"jsValue":"vecMult(__debug__, vecNorm(__debug__, vecFromTo(__debug__, origin_, coord_)), displacement_)"}]}],"variable":["point"],"selectGeom":false},{"type":8,"ID":"prod-xpgtvlgsegr","enabled":false,"print":false,"meta":{"module":"make","name":"Polyline"},"argCount":4,"args":[{"name":"var_name","value":"pline0","jsValue":"pline0_"},{"name":"__model__"},{"name":"entities","value":"arc0","usedVars":[],"jsValue":"arc0_"},{"name":"close","value":"'open'","jsValue":"'open'","usedVars":[]}],"variable":["pline0"]},{"type":8,"ID":"prod-snauulua2ik","enabled":true,"print":false,"meta":{"module":"make","name":"Polyline"},"argCount":4,"args":[{"name":"var_name","value":"pline","jsValue":"pline_"},{"name":"__model__"},{"name":"entities","value":"arc","usedVars":["arc"],"jsValue":"arc_"},{"name":"close","value":"'open'","jsValue":"'open'","usedVars":[]}],"variable":["pline"],"selectGeom":false},{"type":8,"ID":"prod-ojb0d0bi38r","enabled":true,"print":false,"meta":{"module":"make","name":"Extrude"},"argCount":6,"args":[{"name":"var_name","value":"walls","jsValue":"walls_"},{"name":"__model__"},{"name":"entities","value":"pline","usedVars":["pline"],"jsValue":"pline_"},{"name":"dist","value":"10","usedVars":[],"jsValue":"10"},{"name":"divisions","value":"1","usedVars":[],"jsValue":"1"},{"name":"method","value":"'quads'","jsValue":"'quads'","usedVars":[]}],"variable":["walls"]},{"type":0,"ID":"prod-8s50pepb2nr","enabled":false,"print":false,"argCount":2,"args":[{"name":"var_name","value":"wall","jsValue":"wall_"},{"name":"value","value":"walls[10]","usedVars":["walls"],"jsValue":"walls_[pythonList(10, walls_.length)]"}],"variable":["wall"]},{"type":8,"ID":"prod-23uziydved5","enabled":false,"print":false,"meta":{"module":"query","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"edges","jsValue":"edges_"},{"name":"__model__"},{"name":"ent_type_enum","value":"'_e'","jsValue":"'_e'","usedVars":[]},{"name":"entities","value":"wall","jsValue":"wall_","usedVars":["wall"]}],"variable":["edges"]},{"type":8,"ID":"prod-lo9p35415p8","enabled":false,"print":false,"meta":{"module":"query","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"pos","jsValue":"pos_"},{"name":"__model__"},{"name":"ent_type_enum","value":"'ps'","jsValue":"'ps'","usedVars":[]},{"name":"entities","value":"edges","jsValue":"edges_","usedVars":["edges"]}],"variable":["pos"]},{"type":8,"ID":"prod-bol1p4j7ivh","enabled":false,"print":false,"meta":{"module":"attrib","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"coords","jsValue":"coords_"},{"name":"__model__"},{"name":"entities","value":"pos","usedVars":["pos"],"jsValue":"pos_"},{"name":"attrib","value":"\"xyz\"","usedVars":[],"jsValue":"\"xyz\""}],"variable":["coords"]},{"type":8,"ID":"prod-3x93b09njst","enabled":false,"print":false,"meta":{"module":"calc","name":"Vector"},"argCount":3,"args":[{"name":"var_name","value":"vecx","jsValue":"vecx_"},{"name":"__model__"},{"name":"entities","value":"edges[0]","usedVars":["edges"],"jsValue":"edges_[pythonList(0, edges_.length)]"}],"variable":["vecx"]},{"type":8,"ID":"prod-ld394m4hldc","enabled":false,"print":false,"meta":{"module":"calc","name":"Normal"},"argCount":4,"args":[{"name":"var_name","value":"vec","jsValue":"vec_"},{"name":"__model__"},{"name":"entities","value":"wall","usedVars":["wall"],"jsValue":"wall_"},{"name":"scale","value":"1","usedVars":[],"jsValue":"1"}],"variable":["vec"],"selectGeom":false},{"type":8,"ID":"prod-iolqisdzs98","enabled":false,"print":false,"meta":{"module":"calc","name":"Centroid"},"argCount":4,"args":[{"name":"var_name","value":"loc","jsValue":"loc_"},{"name":"__model__"},{"name":"entities","value":"wall","usedVars":["wall"],"jsValue":"wall_"},{"name":"method","value":"'ps_average'","jsValue":"'ps_average'","usedVars":[]}],"variable":["loc"],"selectGeom":false},{"type":8,"ID":"prod-9gje4zuhou7","enabled":false,"print":false,"meta":{"module":"visualize","name":"Ray"},"argCount":4,"args":[{"name":"var_name","value":"vray","jsValue":"vray_"},{"name":"__model__"},{"name":"rays","value":"rayMake(loc, vec, 4)","usedVars":["vec","loc"],"jsValue":"rayMake(__debug__, loc_, vec_, 4)"},{"name":"scale","value":"1","usedVars":[],"jsValue":"1"}],"variable":["vray"],"selectGeom":false},{"type":8,"ID":"prod-ib891ccc8y","enabled":false,"print":false,"meta":{"module":"visualize","name":"Ray"},"argCount":4,"args":[{"name":"var_name","value":"vrayx","jsValue":"vrayx_"},{"name":"__model__"},{"name":"rays","value":"rayMake(coords[0], vecx, 2)","usedVars":["coords","vecx"],"jsValue":"rayMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, 2)"},{"name":"scale","value":"0.5","usedVars":[],"jsValue":"0.5"}],"variable":["vrayx"],"selectGeom":false},{"type":8,"ID":"prod-kjmdshib6p","enabled":false,"print":false,"meta":{"module":"visualize","name":"Plane"},"argCount":4,"args":[{"name":"var_name","value":"vplane","jsValue":"vplane_"},{"name":"__model__"},{"name":"planes","value":"plnMake(coords[0], vecx, vecSub(coords[2], coords[0]))","usedVars":["coords","vecx"],"jsValue":"plnMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, vecSub(__debug__, coords_[pythonList(2, coords_.length)], coords_[pythonList(0, coords_.length)]))"},{"name":"scale","value":"1","usedVars":[],"jsValue":"1"}],"variable":["vplane"],"selectGeom":false},{"type":8,"ID":"prod-j4yhye6qupp","enabled":false,"print":false,"meta":{"module":"modify","name":"Scale"},"argCount":5,"args":[{"name":"__none__"},{"name":"__model__"},{"name":"entities","usedVars":["wall"],"value":"wall","jsValue":"wall_"},{"name":"plane","usedVars":["coords","vecx"],"value":"plnMake(coords[0], vecx, vecSub(coords[2], coords[0]))","jsValue":"plnMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, vecSub(__debug__, coords_[pythonList(2, coords_.length)], coords_[pythonList(0, coords_.length)]))"},{"name":"scale","usedVars":["vec"],"value":"[vecDot([1, 0, 0], vec), 1, 1]","jsValue":"[vecDot(__debug__, [1, 0, 0], vec_), 1, 1]"}],"selectGeom":false,"terminate":false},{"type":4,"ID":"prod-zje8v1b1ds","enabled":true,"print":false,"argCount":2,"args":[{"name":"item","value":"wall","jsValue":"wall_"},{"name":"list","value":"walls","usedVars":["walls"],"jsValue":"walls_"}],"children":[{"type":13,"ID":"prod-zje8v1b1ds-blank","parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":8,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22","ID":"prod-3za83fxk6tf","enabled":true,"print":false,"meta":{"module":"edit","name":"Weld"},"argCount":4,"args":[{"name":"var_name","value":"weld","jsValue":"weld_"},{"name":"__model__"},{"name":"entities","value":"wall","usedVars":["wall"],"jsValue":"wall_"},{"name":"method","value":"'break_weld'","jsValue":"'break_weld'","usedVars":[]}],"variable":["weld"]},{"type":8,"ID":"prod-b9etn06s43a","enabled":true,"print":false,"meta":{"module":"query","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"edges","jsValue":"edges_"},{"name":"__model__"},{"name":"ent_type_enum","value":"'_e'","jsValue":"'_e'","usedVars":[]},{"name":"entities","value":"wall","jsValue":"wall_","usedVars":["wall"]}],"variable":["edges"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"},{"type":8,"ID":"prod-hp9uunyrv4","enabled":true,"print":false,"meta":{"module":"query","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"pos","jsValue":"pos_"},{"name":"__model__"},{"name":"ent_type_enum","value":"'ps'","jsValue":"'ps'","usedVars":[]},{"name":"entities","value":"edges","jsValue":"edges_","usedVars":["edges"]}],"variable":["pos"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"},{"type":8,"ID":"prod-thj22by2sds","enabled":true,"print":false,"meta":{"module":"attrib","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"coords","jsValue":"coords_"},{"name":"__model__"},{"name":"entities","value":"pos","usedVars":["pos"],"jsValue":"pos_"},{"name":"attrib","value":"\"xyz\"","usedVars":[],"jsValue":"\"xyz\""}],"variable":["coords"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"},{"type":8,"ID":"prod-85y16oqkwu5","enabled":true,"print":false,"meta":{"module":"calc","name":"Vector"},"argCount":3,"args":[{"name":"var_name","value":"vecx","jsValue":"vecx_"},{"name":"__model__"},{"name":"entities","value":"edges[0]","usedVars":["edges"],"jsValue":"edges_[pythonList(0, edges_.length)]"}],"variable":["vecx"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"},{"type":8,"ID":"prod-ebu4ozzzvl5","enabled":true,"print":false,"meta":{"module":"calc","name":"Normal"},"argCount":4,"args":[{"name":"var_name","value":"vec","jsValue":"vec_"},{"name":"__model__"},{"name":"entities","value":"wall","usedVars":["wall"],"jsValue":"wall_"},{"name":"scale","value":"1","usedVars":[],"jsValue":"1"}],"variable":["vec"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"},{"type":8,"ID":"prod-rsashh1hgf","enabled":true,"print":false,"meta":{"module":"calc","name":"Centroid"},"argCount":4,"args":[{"name":"var_name","value":"loc","jsValue":"loc_"},{"name":"__model__"},{"name":"entities","value":"wall","usedVars":["wall"],"jsValue":"wall_"},{"name":"method","value":"'ps_average'","jsValue":"'ps_average'","usedVars":[]}],"variable":["loc"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"},{"type":8,"ID":"prod-kmfr2ba5k1","enabled":false,"print":false,"meta":{"module":"visualize","name":"Ray"},"argCount":4,"args":[{"name":"var_name","value":"vray","jsValue":"vray_"},{"name":"__model__"},{"name":"rays","value":"rayMake(loc, vec, 4)","usedVars":["vec","loc"],"jsValue":"rayMake(__debug__, loc_, vec_, 4)"},{"name":"scale","value":"1","usedVars":[],"jsValue":"1"}],"variable":["vray"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"},{"type":8,"ID":"prod-0axyoa0pbzg5","enabled":false,"print":false,"meta":{"module":"visualize","name":"Ray"},"argCount":4,"args":[{"name":"var_name","value":"vrayx","jsValue":"vrayx_"},{"name":"__model__"},{"name":"rays","value":"rayMake(coords[0], vecx, 2)","usedVars":["coords","vecx"],"jsValue":"rayMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, 2)"},{"name":"scale","value":"0.5","usedVars":[],"jsValue":"0.5"}],"variable":["vrayx"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"},{"type":8,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22","ID":"prod-cxd1fj7s9y","enabled":false,"print":false,"meta":{"module":"visualize","name":"Plane"},"argCount":4,"args":[{"name":"var_name","value":"vplane","jsValue":"vplane_"},{"name":"__model__"},{"name":"planes","value":"plnMake(coords[0], vecx, vecSub(coords[2], coords[0]))","usedVars":["coords","vecx"],"jsValue":"plnMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, vecSub(__debug__, coords_[pythonList(2, coords_.length)], coords_[pythonList(0, coords_.length)]))"},{"name":"scale","value":"1","usedVars":[],"jsValue":"1"}],"variable":["vplane"],"terminate":false},{"type":8,"ID":"prod-qqotly0rsu","enabled":true,"print":false,"meta":{"module":"modify","name":"Scale"},"argCount":5,"args":[{"name":"__none__"},{"name":"__model__"},{"name":"entities","usedVars":["wall"],"value":"wall","jsValue":"wall_"},{"name":"plane","usedVars":["coords","vecx"],"value":"plnMake(coords[0], vecx, vecSub(coords[2], coords[0]))","jsValue":"plnMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, vecSub(__debug__, coords_[pythonList(2, coords_.length)], coords_[pythonList(0, coords_.length)]))"},{"name":"scale","usedVars":["vec"],"value":"[remap(vecDot([1, 0, 0], vec), [0, 1], [0.25, 0.9]), 1, 1]","jsValue":"[remap(__debug__, vecDot(__debug__, [1, 0, 0], vec_), [0, 1], [0.25, 0.9]), 1, 1]"}],"selectGeom":false,"terminate":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"}],"variable":["wall"]},{"type":8,"ID":"prod-co703413yk5","enabled":false,"print":false,"meta":{"module":"query","name":"Type"},"argCount":4,"args":[{"name":"var_name","value":"blah","jsValue":"blah_"},{"name":"__model__"},{"name":"entities","value":"[walls[0]#_e[0] , walls[0]#_e[1] ]","usedVars":["walls"],"jsValue":"[ __modules__.query.Get(__params__.model, '_e', walls_[pythonList(0, walls_.length)])[pythonList(0, __modules__.query.Get(__params__.model, '_e', walls_[pythonList(0, walls_.length)]).length)],  __modules__.query.Get(__params__.model, '_e', walls_[pythonList(0, walls_.length)])[pythonList(1, __modules__.query.Get(__params__.model, '_e', walls_[pythonList(0, walls_.length)]).length)]]"},{"name":"type_query_enum","value":"'is_edge'","jsValue":"'is_edge'","usedVars":[]}],"variable":["blah"],"terminate":false},{"type":8,"ID":"prod-4kv36hdnvam","enabled":false,"print":false,"meta":{"module":"modify","name":"Scale"},"argCount":5,"args":[{"name":"__none__"},{"name":"__model__"},{"name":"entities","usedVars":["walls"],"value":"walls","jsValue":"walls_"},{"name":"plane","usedVars":[],"value":"rayMake([0, 0, 0], [1, 0, 0])","jsValue":"rayMake(__debug__, [0, 0, 0], [1, 0, 0])"},{"name":"scale","usedVars":["wall"],"value":"vecDot([1, 0, 0], vecNorm(wall))","jsValue":"vecDot(__debug__, [1, 0, 0], vecNorm(__debug__, wall_))"}],"selectGeom":false},{"type":8,"ID":"prod-mjj1mckqlbp","enabled":true,"print":false,"meta":{"module":"attrib","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"point","jsValue":"point_"},{"name":"__model__"},{"name":"entities","value":"arc[0]","usedVars":["arc"],"jsValue":"arc_[pythonList(0, arc_.length)]"},{"name":"attrib","value":"\"xyz\"","usedVars":[],"jsValue":"\"xyz\""}],"variable":["point"]}],"localFunc":[{"type":13,"ID":"local_func_blank","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":16,"ID":"prod-is6zhj5gz8g","enabled":true,"print":false,"argCount":2,"meta":{"module":"","name":"","otherInfo":{"prev_name":"LawCrv","num_returns":1,"collapsed":false}},"args":[{"name":"func_name","value":"LawCrv","jsValue":"LawCrv_"},{"name":"arg_1","value":"t","jsValue":"t_","usedVars":["t"]}],"children":[{"type":13,"ID":"prod-is6zhj5gz8g-blank","parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~1","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":17,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~1","ID":"prod-jazwxpsd7","enabled":true,"print":false,"argCount":1,"args":[{"name":"Value","value":"cos(t)","usedVars":["t"],"jsValue":"cos(__debug__, t_)"}]}],"variable":null},{"type":16,"ID":"prod-otqehaqvkpe","enabled":true,"print":false,"argCount":3,"meta":{"module":"","name":"","otherInfo":{"prev_name":"perp","num_returns":0,"collapsed":false}},"args":[{"name":"func_name","value":"perp","jsValue":"perp_"},{"name":"arg_1","value":"vec","jsValue":"vec_","usedVars":["vec"]},{"name":"arg_2","value":"z","jsValue":"z_","usedVars":["z"]}],"children":[{"type":13,"ID":"prod-otqehaqvkpe-blank","parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~2","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":0,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~2","ID":"prod-nunzwcaaux","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"perpendiculars","jsValue":"perpendiculars_"},{"name":"value","value":"vecCross(vec, z)","usedVars":["vec","z"],"jsValue":"vecCross(__debug__, vec_, z_)"}],"variable":["perpendiculars"]}],"variable":null},{"type":16,"ID":"prod-qru7oydhagt","enabled":true,"print":false,"argCount":4,"meta":{"module":"","name":"","otherInfo":{"prev_name":"GetOffset","num_returns":1,"collapsed":false}},"args":[{"name":"func_name","value":"GetOffset","jsValue":"GetOffset_"},{"name":"arg_1","value":"angle","jsValue":"angle_","usedVars":["angle"]},{"name":"arg_2","value":"num_und","jsValue":"num_und_","usedVars":["num_und"]},{"name":"arg_3","value":"und_depth","jsValue":"und_depth_","usedVars":["und_depth"]}],"children":[{"type":13,"ID":"prod-qru7oydhagt-blank","parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~3","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":18,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~3","ID":"prod-ejy21hcy0m5","enabled":true,"print":false,"argCount":2,"meta":{"module":"localFunc","name":"LawCrv"},"args":[{"name":"var_name","value":"lc","jsValue":"lc_"},{"name":"t","value":"remap(angle, [0, 90], [0, 2 * PI * num_und])","usedVars":["angle","num_und"],"jsValue":"remap(__debug__, angle_, [0, 90], [0, 2 * JSON.parse(JSON.stringify(PI)) * num_und_])"}],"variable":["lc"],"selectGeom":false},{"type":0,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~3","ID":"prod-plohxllvxw","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"displacement","jsValue":"displacement_"},{"name":"value","value":"remap(lc, [-1, 1], [und_depth, 0])","usedVars":["lc","und_depth"],"jsValue":"remap(__debug__, lc_, [-1, 1], [und_depth_, 0])"}],"variable":["displacement"],"selectGeom":false},{"type":17,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~3","ID":"prod-zubbou6zg4","enabled":true,"print":false,"argCount":1,"args":[{"name":"Value","value":"displacement","usedVars":["displacement"],"jsValue":"displacement_"}]}],"variable":null},{"type":16,"ID":"prod-i4kiz1pxuz","enabled":true,"print":false,"argCount":3,"meta":{"module":"","name":"","otherInfo":{"prev_name":"vecFromPoly","num_returns":1,"collapsed":false}},"args":[{"name":"func_name","value":"vecFromPoly","jsValue":"vecFromPoly_"},{"name":"arg_1","value":"poly","jsValue":"poly_","usedVars":["poly"]},{"name":"arg_2","value":"direction","jsValue":"direction_","usedVars":["direction"]}],"children":[{"type":13,"ID":"prod-i4kiz1pxuz-blank","parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":8,"ID":"prod-bau4juw5i6l","enabled":true,"print":false,"meta":{"module":"query","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"edges","jsValue":"edges_"},{"name":"__model__"},{"name":"ent_type_enum","value":"'_e'","jsValue":"'_e'","usedVars":[]},{"name":"entities","value":"poly","jsValue":"poly_","usedVars":["poly"]}],"variable":["edges"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4"},{"type":8,"ID":"prod-bnadaekhac9","enabled":true,"print":false,"meta":{"module":"query","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"positions","jsValue":"positions_"},{"name":"__model__"},{"name":"ent_type_enum","value":"'ps'","jsValue":"'ps'","usedVars":[]},{"name":"entities","value":"edges","jsValue":"edges_","usedVars":["edges"]}],"variable":["positions"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4"},{"type":8,"ID":"prod-0l3r1xqo7tv","enabled":true,"print":false,"meta":{"module":"attrib","name":"Get"},"argCount":4,"args":[{"name":"var_name","value":"points","jsValue":"points_"},{"name":"__model__"},{"name":"entities","value":"positions","usedVars":["positions"],"jsValue":"positions_"},{"name":"attrib","value":"\"xyz\"","usedVars":[],"jsValue":"\"xyz\""}],"variable":["points"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4"},{"type":0,"ID":"prod-70spwpfp24d","enabled":true,"print":false,"argCount":2,"args":[{"name":"var_name","value":"vec","jsValue":"vec_"},{"name":"value","value":"vecNorm(vecCross(vecSub(points[1], points[0]), vecSub(points[2], points[1])))","usedVars":["points"],"jsValue":"vecNorm(__debug__, vecCross(__debug__, vecSub(__debug__, points_[pythonList(1, points_.length)], points_[pythonList(0, points_.length)]), vecSub(__debug__, points_[pythonList(2, points_.length)], points_[pythonList(1, points_.length)])))"}],"variable":["vec"],"selectGeom":false,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4"},{"type":17,"parent":"~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4","ID":"prod-vravrlt394","enabled":true,"print":false,"argCount":1,"args":[{"name":"Value","value":"vecMult(vec, direction / norm(direction))","usedVars":["vec","direction"],"jsValue":"vecMult(__debug__, vec_, direction_ / norm(__debug__, direction_))"}]}],"variable":null}],"state":{"procedure":[],"show_code":true,"show_func":true,"hasExecuted":true},"input":"~flowchart~nodes~0~output~edges~0~target","output":{"name":"output","type":1,"edges":[{"source":"~flowchart~nodes~0~output~edges~0~target~parentNode~output","target":{"name":"input","type":0,"edges":["~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0"],"meta":{"mode":0,"opts":{}},"parentNode":{"name":"End","id":"node_wd6za5hcv18","position":{"x":5340,"y":5400},"enabled":true,"type":"end","procedure":[{"type":13,"ID":"main_blank","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false},{"type":11,"ID":"Return","meta":{"name":"","module":""},"argCount":2,"args":[{"name":"__model__","value":"","jsValue":""},{"name":"value","value":"","jsValue":""}],"print":false,"enabled":true,"terminate":false}],"localFunc":[{"type":13,"ID":"local_func_blank","meta":{"name":"","module":""},"argCount":0,"args":[],"print":false,"enabled":true,"selectGeom":false}],"state":{"procedure":[],"show_code":true,"show_func":true,"hasExecuted":true},"input":"~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0~target","output":{"name":"output","type":1,"edges":[],"meta":{"mode":0},"parentNode":"~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0~target~parentNode"},"hasError":false,"model":4}},"selected":false}],"meta":{"mode":0},"parentNode":"~flowchart~nodes~0~output~edges~0~target~parentNode"},"hasError":false,"model":3}},"selected":false}],"meta":{"mode":0},"parentNode":"~flowchart~nodes~0"},"hasError":false,"model":2},"~flowchart~nodes~0~output~edges~0~target~parentNode","~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0~target~parentNode"],"edges":["~flowchart~nodes~0~output~edges~0","~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0"],"functions":[],"ordered":true,"last_updated":"2021-11-27T06:10:53.514Z"},"version":"0.8.11","settings":"{\"normals\":{\"show\":false,\"size\":5},\"axes\":{\"show\":true,\"size\":50},\"grid\":{\"show\":true,\"size\":500,\"pos_x\":0,\"pos_y\":0,\"pos_z\":0,\"pos\":{\"x\":0,\"y\":0,\"z\":0}},\"background\":{\"show\":true,\"background_set\":0},\"positions\":{\"show\":false,\"size\":4.3},\"tjs_summary\":{\"show\":false},\"gi_summary\":{\"show\":false},\"wireframe\":{\"show\":false},\"camera\":{\"pos\":{\"x\":-21.27515093656342,\"y\":-24.539539646262075,\"z\":34.99703834877228},\"target\":{\"x\":0,\"y\":0,\"z\":10},\"ortho\":false,\"pos_x\":452.70077183931636,\"pos_y\":-912.2536880120044,\"pos_z\":768.7903824241532},\"colors\":{\"viewer_bg\":\"#E6E6E6\",\"position\":\"#000000\",\"position_s\":\"#0033FF\",\"vertex_s\":\"#FFCC00\",\"face_f\":\"#FFFFFF\",\"face_f_s\":\"#4949BD\",\"face_b\":\"#DDDDDD\",\"face_b_s\":\"#00006D\"},\"ambient_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":0.5},\"hemisphere_light\":{\"show\":true,\"helper\":false,\"skyColor\":\"#FFFFFF\",\"groundColor\":\"#FFFFFF\",\"intensity\":0.5},\"directional_light\":{\"show\":false,\"helper\":false,\"color\":\"#FFFFFF\",\"intensity\":1,\"shadow\":true,\"azimuth\":90,\"altitude\":45,\"distance\":10,\"type\":\"directional\",\"shadowSize\":3072},\"ground\":{\"show\":false,\"width\":1000,\"length\":1000,\"height\":-0.5,\"color\":\"#FFFFFF\",\"shininess\":0},\"select\":{\"selector\":{\"id\":7,\"name\":\"Polygons\"},\"tab\":\"0\",\"enabledselector\":{\"ps\":true,\"_v\":true,\"_e\":true,\"_w\":true,\"_f\":true,\"pt\":true,\"pl\":true,\"pg\":true,\"co\":true}},\"version\":\"0.4.38\",\"cesium\":{\"imagery\":{\"layer\":\"Open Street Map\",\"terrain\":\"Ellipsoid\",\"apiKey\":{\"here\":\"7vMRjLNCpcOAUQXU61eUp6EFbWCy7WLNmy9qLHO-1Bw\"}},\"camera\":{\"pos\":{\"x\":0,\"y\":0,\"z\":0},\"direction\":{\"x\":0,\"y\":0,\"z\":0},\"up\":{\"x\":0,\"y\":0,\"z\":0},\"right\":{\"x\":0,\"y\":0,\"z\":0}},\"updated\":true,\"time\":{\"date\":\"2020-05-11\"},\"model\":{\"polygonEdge\":true}},\"day_light\":{\"show\":true,\"helper\":false,\"intensity\":1,\"position\":[0,2000,1000],\"size\":1000},\"aframe\":{\"camera\":{\"position\":{\"x\":0,\"y\":5,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0},\"acceleration\":444,\"show_cam_info\":true},\"background\":{\"background_set\":1,\"background_url\":\"\",\"background_position\":{\"x\":0,\"y\":0,\"z\":0},\"background_rotation\":0},\"ambient_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":0.15},\"hemisphere_light\":{\"show\":true,\"skyColor\":\"#FFFFFF\",\"groundColor\":\"#FFFFFF\",\"intensity\":0.15,\"helper\":false},\"directional_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":1,\"azimuth\":90,\"altitude\":45,\"shadowSize\":2048,\"helper\":false,\"shadow\":true,\"distance\":10,\"type\":\"directional\"},\"ground\":{\"show\":false,\"width\":1000,\"length\":1000,\"height\":-0.5,\"color\":\"#FFFFFF\",\"shininess\":0},\"updated\":true,\"vr\":{\"background_url\":\"\",\"background_rotation\":0,\"foreground_url\":\"\",\"foreground_rotation\":0},\"vr_hotspot\":{\"background_url\":\"\",\"background_rotation\":0,\"foreground_url\":\"\",\"foreground_rotation\":0}},\"geo\":{\"imagery\":{\"layer\":\"Open Street Map\",\"terrain\":\"Ellipsoid\",\"apiKey\":{\"here\":\"7vMRjLNCpcOAUQXU61eUp6EFbWCy7WLNmy9qLHO-1Bw\"}},\"camera\":{\"pos\":{\"x\":-1527170.4564504684,\"y\":6191377.229851589,\"z\":142492.86697965642},\"direction\":{\"x\":0,\"y\":0,\"z\":0},\"up\":{\"x\":0,\"y\":0,\"z\":0},\"right\":{\"x\":0,\"y\":0,\"z\":0},\"rot\":{\"x\":-2.8946890807177175,\"y\":0.03332128705035884,\"z\":2.8868931928931136}},\"time\":{\"date\":\"2021-01-27T16:00\"},\"model\":{\"polygonEdge\":false},\"updated\":true}}"}
+{
+    "__filetype__": "mobius",
+    "name": "Week 1 - Undulating Wall",
+    "author": "new_user",
+    "flowchart": {
+        "id": "be8ea504-aca4-84a1-914a-11dc45b2b7fc",
+        "name": "Week 1 - Undulating Wall",
+        "description": "A script for generating an undulating wall. This script performs three main steps.\n\nIt generates an arc polyline.\nIt offsets the positions along the arc outwards using a cosine Law Curve.\nIt extrudes the deformed arc to form a set of vertical panels.",
+        "language": "js",
+        "meta": { "selected_nodes": [0] },
+        "nodes": [
+            {
+                "name": "Start",
+                "id": "node_7pafd1sdkbc",
+                "position": { "x": 5340, "y": 5000 },
+                "enabled": true,
+                "type": "start",
+                "procedure": [
+                    {
+                        "type": 13,
+                        "ID": "main_blank",
+                        "meta": { "name": "", "module": "" },
+                        "argCount": 0,
+                        "args": [],
+                        "print": false,
+                        "enabled": true,
+                        "selectGeom": false
+                    },
+                    {
+                        "type": 10,
+                        "ID": "parameters_blank",
+                        "meta": {
+                            "description": "",
+                            "inputMode": 5,
+                            "module": "ParamBlank",
+                            "name": "Constant"
+                        },
+                        "argCount": 0,
+                        "args": [],
+                        "print": false,
+                        "enabled": false,
+                        "terminate": false
+                    },
+                    {
+                        "type": 10,
+                        "ID": "prod-cgt010olvwd",
+                        "enabled": true,
+                        "print": false,
+                        "argCount": 2,
+                        "meta": {
+                            "module": "Input",
+                            "name": "Constant",
+                            "inputMode": 1,
+                            "description": "The number of undulations along the arc. Each undulation is 2PI radians."
+                        },
+                        "args": [
+                            {
+                                "name": "const_name",
+                                "value": "NUM_UND",
+                                "jsValue": "NUM_UND_"
+                            },
+                            {
+                                "name": "__input__",
+                                "value": 5,
+                                "step": "1",
+                                "min": "1",
+                                "max": "30"
+                            }
+                        ]
+                    },
+                    {
+                        "type": 10,
+                        "ID": "prod-62irme4x9h5",
+                        "enabled": true,
+                        "print": false,
+                        "argCount": 2,
+                        "meta": {
+                            "module": "Input",
+                            "name": "Constant",
+                            "inputMode": 1,
+                            "description": "The depth (or amplitude) of the undulations. "
+                        },
+                        "args": [
+                            {
+                                "name": "const_name",
+                                "value": "UND_DEPTH",
+                                "jsValue": "UND_DEPTH_"
+                            },
+                            {
+                                "name": "__input__",
+                                "value": 3.8,
+                                "step": "0.1",
+                                "min": "1",
+                                "max": "4"
+                            }
+                        ]
+                    },
+                    {
+                        "type": 10,
+                        "ID": "prod-f466x7vehow",
+                        "enabled": true,
+                        "print": false,
+                        "argCount": 2,
+                        "meta": {
+                            "module": "Input",
+                            "name": "Constant",
+                            "inputMode": 1,
+                            "description": "Resolution of the Curve"
+                        },
+                        "args": [
+                            {
+                                "name": "const_name",
+                                "value": "RESOLUTION",
+                                "jsValue": "RESOLUTION_"
+                            },
+                            {
+                                "name": "__input__",
+                                "value": 64,
+                                "step": "1",
+                                "min": "10",
+                                "max": "100"
+                            }
+                        ]
+                    }
+                ],
+                "localFunc": [
+                    {
+                        "type": 13,
+                        "ID": "local_func_blank",
+                        "meta": { "name": "", "module": "" },
+                        "argCount": 0,
+                        "args": [],
+                        "print": false,
+                        "enabled": true,
+                        "selectGeom": false
+                    }
+                ],
+                "state": {
+                    "procedure": [],
+                    "show_code": false,
+                    "show_func": false,
+                    "hasExecuted": true
+                },
+                "input": {
+                    "name": "input",
+                    "type": 0,
+                    "edges": [],
+                    "meta": { "mode": 0, "opts": {} },
+                    "parentNode": "~flowchart~nodes~0"
+                },
+                "output": {
+                    "name": "output",
+                    "type": 1,
+                    "edges": [
+                        {
+                            "source": "~flowchart~nodes~0~output",
+                            "target": {
+                                "name": "input",
+                                "type": 0,
+                                "edges": ["~flowchart~nodes~0~output~edges~0"],
+                                "meta": { "mode": 0, "opts": {} },
+                                "parentNode": {
+                                    "name": "Node",
+                                    "id": "node_m8urgrdj7p",
+                                    "position": { "x": 5340, "y": 5200 },
+                                    "enabled": true,
+                                    "type": "",
+                                    "procedure": [
+                                        {
+                                            "type": 13,
+                                            "ID": "main_blank",
+                                            "meta": {
+                                                "name": "",
+                                                "module": ""
+                                            },
+                                            "argCount": 0,
+                                            "args": [],
+                                            "print": false,
+                                            "enabled": true,
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 0,
+                                            "ID": "prod-2939xenzv4s",
+                                            "enabled": true,
+                                            "print": false,
+                                            "argCount": 2,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "resolution",
+                                                    "jsValue": "resolution_"
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "value": "RESOLUTION",
+                                                    "usedVars": ["RESOLUTION"],
+                                                    "jsValue": "RESOLUTION_"
+                                                }
+                                            ],
+                                            "variable": ["resolution"]
+                                        },
+                                        {
+                                            "type": 0,
+                                            "ID": "prod-3o07rs48m3i",
+                                            "enabled": true,
+                                            "print": false,
+                                            "argCount": 2,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "radius",
+                                                    "jsValue": "radius_"
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "value": "50",
+                                                    "usedVars": [],
+                                                    "jsValue": "50"
+                                                }
+                                            ],
+                                            "variable": ["radius"]
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-e4h9a25kvj4",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "pattern",
+                                                "name": "Arc"
+                                            },
+                                            "argCount": 6,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "arc0",
+                                                    "jsValue": "arc0_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "origin",
+                                                    "value": "[0, 0, 0]",
+                                                    "usedVars": [],
+                                                    "jsValue": "[0, 0, 0]"
+                                                },
+                                                {
+                                                    "name": "radius",
+                                                    "value": "radius",
+                                                    "usedVars": ["radius"],
+                                                    "jsValue": "radius_"
+                                                },
+                                                {
+                                                    "name": "num_positions",
+                                                    "value": "resolution",
+                                                    "usedVars": ["resolution"],
+                                                    "jsValue": "resolution_"
+                                                },
+                                                {
+                                                    "name": "arc_angle",
+                                                    "value": "PI / 2",
+                                                    "usedVars": [],
+                                                    "jsValue": "JSON.parse(JSON.stringify(PI)) / 2"
+                                                }
+                                            ],
+                                            "variable": ["arc0"]
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-3hsh0vc8g93",
+                                            "enabled": true,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "pattern",
+                                                "name": "Arc"
+                                            },
+                                            "argCount": 6,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "arc",
+                                                    "jsValue": "arc_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "origin",
+                                                    "value": "[0, 0, 0]",
+                                                    "usedVars": [],
+                                                    "jsValue": "[0, 0, 0]"
+                                                },
+                                                {
+                                                    "name": "radius",
+                                                    "value": "radius",
+                                                    "usedVars": ["radius"],
+                                                    "jsValue": "radius_"
+                                                },
+                                                {
+                                                    "name": "num_positions",
+                                                    "value": "resolution",
+                                                    "usedVars": ["resolution"],
+                                                    "jsValue": "resolution_"
+                                                },
+                                                {
+                                                    "name": "arc_angle",
+                                                    "value": "PI / 2",
+                                                    "usedVars": [],
+                                                    "jsValue": "JSON.parse(JSON.stringify(PI)) / 2"
+                                                }
+                                            ],
+                                            "variable": ["arc"],
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 0,
+                                            "ID": "prod-2hy1udqjiqu",
+                                            "enabled": false,
+                                            "print": false,
+                                            "argCount": 2,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "num_und",
+                                                    "jsValue": "num_und_"
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "value": "4",
+                                                    "usedVars": [],
+                                                    "jsValue": "4"
+                                                }
+                                            ],
+                                            "variable": ["num_und"]
+                                        },
+                                        {
+                                            "type": 0,
+                                            "ID": "prod-3hjxhekq90n",
+                                            "enabled": false,
+                                            "print": false,
+                                            "argCount": 2,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "und_depth",
+                                                    "jsValue": "und_depth_"
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "value": "3",
+                                                    "usedVars": [],
+                                                    "jsValue": "3"
+                                                }
+                                            ],
+                                            "variable": ["und_depth"]
+                                        },
+                                        {
+                                            "type": 4,
+                                            "ID": "prod-8g1t1zrgnqd",
+                                            "enabled": true,
+                                            "print": false,
+                                            "argCount": 2,
+                                            "args": [
+                                                {
+                                                    "name": "item",
+                                                    "value": "point",
+                                                    "jsValue": "point_"
+                                                },
+                                                {
+                                                    "name": "list",
+                                                    "value": "arc",
+                                                    "usedVars": ["arc"],
+                                                    "jsValue": "arc_"
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "type": 13,
+                                                    "ID": "prod-rhyqkzhs0u",
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7",
+                                                    "meta": {
+                                                        "name": "",
+                                                        "module": ""
+                                                    },
+                                                    "argCount": 0,
+                                                    "args": [],
+                                                    "print": false,
+                                                    "enabled": true,
+                                                    "selectGeom": false
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7",
+                                                    "ID": "prod-a08njzsdpwj",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "attrib",
+                                                        "name": "Get"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "coord",
+                                                            "jsValue": "coord_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "point",
+                                                            "usedVars": [
+                                                                "point"
+                                                            ],
+                                                            "jsValue": "point_"
+                                                        },
+                                                        {
+                                                            "name": "attrib",
+                                                            "value": "\"xyz\"",
+                                                            "usedVars": [],
+                                                            "jsValue": "\"xyz\""
+                                                        }
+                                                    ],
+                                                    "variable": ["coord"]
+                                                },
+                                                {
+                                                    "type": 0,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7",
+                                                    "ID": "prod-x4st2v1duv",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 2,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "origin",
+                                                            "jsValue": "origin_"
+                                                        },
+                                                        {
+                                                            "name": "value",
+                                                            "value": "[0, 0, 0]",
+                                                            "usedVars": [],
+                                                            "jsValue": "[0, 0, 0]"
+                                                        }
+                                                    ],
+                                                    "variable": ["origin"]
+                                                },
+                                                {
+                                                    "type": 0,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7",
+                                                    "ID": "prod-d5nh3t3lo8r",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 2,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "ray",
+                                                            "jsValue": "ray_"
+                                                        },
+                                                        {
+                                                            "name": "value",
+                                                            "value": "rayMake(origin, coord, 50)",
+                                                            "usedVars": [
+                                                                "coord",
+                                                                "origin"
+                                                            ],
+                                                            "jsValue": "rayMake(__debug__, origin_, coord_, 50)"
+                                                        }
+                                                    ],
+                                                    "variable": ["ray"],
+                                                    "selectGeom": false
+                                                },
+                                                {
+                                                    "type": 0,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7",
+                                                    "ID": "prod-2claygovskk",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 2,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "angle",
+                                                            "jsValue": "angle_"
+                                                        },
+                                                        {
+                                                            "name": "value",
+                                                            "value": "acos(vecDot([1, 0, 0], vecNorm(coord))) * 180 / PI",
+                                                            "usedVars": [
+                                                                "coord"
+                                                            ],
+                                                            "jsValue": "acos(__debug__, vecDot(__debug__, [1, 0, 0], vecNorm(__debug__, coord_))) * 180 / JSON.parse(JSON.stringify(PI))"
+                                                        }
+                                                    ],
+                                                    "variable": ["angle"]
+                                                },
+                                                {
+                                                    "type": 18,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7",
+                                                    "ID": "prod-qf9tzi5f1f",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 4,
+                                                    "meta": {
+                                                        "module": "localFunc",
+                                                        "name": "GetOffset",
+                                                        "otherInfo": {}
+                                                    },
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "displacement",
+                                                            "jsValue": "displacement_"
+                                                        },
+                                                        {
+                                                            "name": "angle",
+                                                            "value": "angle",
+                                                            "jsValue": "angle_",
+                                                            "usedVars": [
+                                                                "angle"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "num_und",
+                                                            "value": "NUM_UND",
+                                                            "jsValue": "NUM_UND_",
+                                                            "usedVars": [
+                                                                "NUM_UND"
+                                                            ]
+                                                        },
+                                                        {
+                                                            "name": "und_depth",
+                                                            "value": "UND_DEPTH",
+                                                            "jsValue": "UND_DEPTH_",
+                                                            "usedVars": [
+                                                                "UND_DEPTH"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "variable": ["displacement"]
+                                                },
+                                                {
+                                                    "type": 0,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7",
+                                                    "ID": "prod-n2uz8q92wnq",
+                                                    "enabled": false,
+                                                    "print": true,
+                                                    "argCount": 2,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "blah",
+                                                            "jsValue": "blah_"
+                                                        },
+                                                        {
+                                                            "name": "value",
+                                                            "value": "vecMult(vecNorm(vecFromTo(origin, coord)), displacement)",
+                                                            "usedVars": [
+                                                                "coord",
+                                                                "origin",
+                                                                "displacement"
+                                                            ],
+                                                            "jsValue": "vecMult(__debug__, vecNorm(__debug__, vecFromTo(__debug__, origin_, coord_)), displacement_)"
+                                                        }
+                                                    ],
+                                                    "variable": ["blah"]
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~7",
+                                                    "ID": "prod-7yr2q4zp4xa",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "modify",
+                                                        "name": "Move"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        { "name": "__none__" },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "point",
+                                                            "usedVars": [
+                                                                "point"
+                                                            ],
+                                                            "jsValue": "point_"
+                                                        },
+                                                        {
+                                                            "name": "vectors",
+                                                            "value": "vecMult(vecNorm(vecFromTo(origin, coord)), displacement)",
+                                                            "usedVars": [
+                                                                "coord",
+                                                                "origin",
+                                                                "displacement"
+                                                            ],
+                                                            "jsValue": "vecMult(__debug__, vecNorm(__debug__, vecFromTo(__debug__, origin_, coord_)), displacement_)"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "variable": ["point"],
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-xpgtvlgsegr",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "make",
+                                                "name": "Polyline"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "pline0",
+                                                    "jsValue": "pline0_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "arc0",
+                                                    "usedVars": [],
+                                                    "jsValue": "arc0_"
+                                                },
+                                                {
+                                                    "name": "close",
+                                                    "value": "'open'",
+                                                    "jsValue": "'open'",
+                                                    "usedVars": []
+                                                }
+                                            ],
+                                            "variable": ["pline0"]
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-snauulua2ik",
+                                            "enabled": true,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "make",
+                                                "name": "Polyline"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "pline",
+                                                    "jsValue": "pline_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "arc",
+                                                    "usedVars": ["arc"],
+                                                    "jsValue": "arc_"
+                                                },
+                                                {
+                                                    "name": "close",
+                                                    "value": "'open'",
+                                                    "jsValue": "'open'",
+                                                    "usedVars": []
+                                                }
+                                            ],
+                                            "variable": ["pline"],
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-ojb0d0bi38r",
+                                            "enabled": true,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "make",
+                                                "name": "Extrude"
+                                            },
+                                            "argCount": 6,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "walls",
+                                                    "jsValue": "walls_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "pline",
+                                                    "usedVars": ["pline"],
+                                                    "jsValue": "pline_"
+                                                },
+                                                {
+                                                    "name": "dist",
+                                                    "value": "10",
+                                                    "usedVars": [],
+                                                    "jsValue": "10"
+                                                },
+                                                {
+                                                    "name": "divisions",
+                                                    "value": "1",
+                                                    "usedVars": [],
+                                                    "jsValue": "1"
+                                                },
+                                                {
+                                                    "name": "method",
+                                                    "value": "'quads'",
+                                                    "jsValue": "'quads'",
+                                                    "usedVars": []
+                                                }
+                                            ],
+                                            "variable": ["walls"]
+                                        },
+                                        {
+                                            "type": 0,
+                                            "ID": "prod-8s50pepb2nr",
+                                            "enabled": false,
+                                            "print": false,
+                                            "argCount": 2,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "wall",
+                                                    "jsValue": "wall_"
+                                                },
+                                                {
+                                                    "name": "value",
+                                                    "value": "walls[10]",
+                                                    "usedVars": ["walls"],
+                                                    "jsValue": "walls_[pythonList(10, walls_.length)]"
+                                                }
+                                            ],
+                                            "variable": ["wall"]
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-23uziydved5",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "query",
+                                                "name": "Get"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "edges",
+                                                    "jsValue": "edges_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "ent_type_enum",
+                                                    "value": "'_e'",
+                                                    "jsValue": "'_e'",
+                                                    "usedVars": []
+                                                },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "wall",
+                                                    "jsValue": "wall_",
+                                                    "usedVars": ["wall"]
+                                                }
+                                            ],
+                                            "variable": ["edges"]
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-lo9p35415p8",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "query",
+                                                "name": "Get"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "pos",
+                                                    "jsValue": "pos_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "ent_type_enum",
+                                                    "value": "'ps'",
+                                                    "jsValue": "'ps'",
+                                                    "usedVars": []
+                                                },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "edges",
+                                                    "jsValue": "edges_",
+                                                    "usedVars": ["edges"]
+                                                }
+                                            ],
+                                            "variable": ["pos"]
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-bol1p4j7ivh",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "attrib",
+                                                "name": "Get"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "coords",
+                                                    "jsValue": "coords_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "pos",
+                                                    "usedVars": ["pos"],
+                                                    "jsValue": "pos_"
+                                                },
+                                                {
+                                                    "name": "attrib",
+                                                    "value": "\"xyz\"",
+                                                    "usedVars": [],
+                                                    "jsValue": "\"xyz\""
+                                                }
+                                            ],
+                                            "variable": ["coords"]
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-3x93b09njst",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "calc",
+                                                "name": "Vector"
+                                            },
+                                            "argCount": 3,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "vecx",
+                                                    "jsValue": "vecx_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "edges[0]",
+                                                    "usedVars": ["edges"],
+                                                    "jsValue": "edges_[pythonList(0, edges_.length)]"
+                                                }
+                                            ],
+                                            "variable": ["vecx"]
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-ld394m4hldc",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "calc",
+                                                "name": "Normal"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "vec",
+                                                    "jsValue": "vec_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "wall",
+                                                    "usedVars": ["wall"],
+                                                    "jsValue": "wall_"
+                                                },
+                                                {
+                                                    "name": "scale",
+                                                    "value": "1",
+                                                    "usedVars": [],
+                                                    "jsValue": "1"
+                                                }
+                                            ],
+                                            "variable": ["vec"],
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-iolqisdzs98",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "calc",
+                                                "name": "Centroid"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "loc",
+                                                    "jsValue": "loc_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "wall",
+                                                    "usedVars": ["wall"],
+                                                    "jsValue": "wall_"
+                                                },
+                                                {
+                                                    "name": "method",
+                                                    "value": "'ps_average'",
+                                                    "jsValue": "'ps_average'",
+                                                    "usedVars": []
+                                                }
+                                            ],
+                                            "variable": ["loc"],
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-9gje4zuhou7",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "visualize",
+                                                "name": "Ray"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "vray",
+                                                    "jsValue": "vray_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "rays",
+                                                    "value": "rayMake(loc, vec, 4)",
+                                                    "usedVars": ["vec", "loc"],
+                                                    "jsValue": "rayMake(__debug__, loc_, vec_, 4)"
+                                                },
+                                                {
+                                                    "name": "scale",
+                                                    "value": "1",
+                                                    "usedVars": [],
+                                                    "jsValue": "1"
+                                                }
+                                            ],
+                                            "variable": ["vray"],
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-ib891ccc8y",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "visualize",
+                                                "name": "Ray"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "vrayx",
+                                                    "jsValue": "vrayx_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "rays",
+                                                    "value": "rayMake(coords[0], vecx, 2)",
+                                                    "usedVars": [
+                                                        "coords",
+                                                        "vecx"
+                                                    ],
+                                                    "jsValue": "rayMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, 2)"
+                                                },
+                                                {
+                                                    "name": "scale",
+                                                    "value": "0.5",
+                                                    "usedVars": [],
+                                                    "jsValue": "0.5"
+                                                }
+                                            ],
+                                            "variable": ["vrayx"],
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-kjmdshib6p",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "visualize",
+                                                "name": "Plane"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "vplane",
+                                                    "jsValue": "vplane_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "planes",
+                                                    "value": "plnMake(coords[0], vecx, vecSub(coords[2], coords[0]))",
+                                                    "usedVars": [
+                                                        "coords",
+                                                        "vecx"
+                                                    ],
+                                                    "jsValue": "plnMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, vecSub(__debug__, coords_[pythonList(2, coords_.length)], coords_[pythonList(0, coords_.length)]))"
+                                                },
+                                                {
+                                                    "name": "scale",
+                                                    "value": "1",
+                                                    "usedVars": [],
+                                                    "jsValue": "1"
+                                                }
+                                            ],
+                                            "variable": ["vplane"],
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-j4yhye6qupp",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "modify",
+                                                "name": "Scale"
+                                            },
+                                            "argCount": 5,
+                                            "args": [
+                                                { "name": "__none__" },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "usedVars": ["wall"],
+                                                    "value": "wall",
+                                                    "jsValue": "wall_"
+                                                },
+                                                {
+                                                    "name": "plane",
+                                                    "usedVars": [
+                                                        "coords",
+                                                        "vecx"
+                                                    ],
+                                                    "value": "plnMake(coords[0], vecx, vecSub(coords[2], coords[0]))",
+                                                    "jsValue": "plnMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, vecSub(__debug__, coords_[pythonList(2, coords_.length)], coords_[pythonList(0, coords_.length)]))"
+                                                },
+                                                {
+                                                    "name": "scale",
+                                                    "usedVars": ["vec"],
+                                                    "value": "[vecDot([1, 0, 0], vec), 1, 1]",
+                                                    "jsValue": "[vecDot(__debug__, [1, 0, 0], vec_), 1, 1]"
+                                                }
+                                            ],
+                                            "selectGeom": false,
+                                            "terminate": false
+                                        },
+                                        {
+                                            "type": 4,
+                                            "ID": "prod-zje8v1b1ds",
+                                            "enabled": true,
+                                            "print": false,
+                                            "argCount": 2,
+                                            "args": [
+                                                {
+                                                    "name": "item",
+                                                    "value": "wall",
+                                                    "jsValue": "wall_"
+                                                },
+                                                {
+                                                    "name": "list",
+                                                    "value": "walls",
+                                                    "usedVars": ["walls"],
+                                                    "jsValue": "walls_"
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "type": 13,
+                                                    "ID": "prod-zje8v1b1ds-blank",
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22",
+                                                    "meta": {
+                                                        "name": "",
+                                                        "module": ""
+                                                    },
+                                                    "argCount": 0,
+                                                    "args": [],
+                                                    "print": false,
+                                                    "enabled": true,
+                                                    "selectGeom": false
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22",
+                                                    "ID": "prod-3za83fxk6tf",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "edit",
+                                                        "name": "Weld"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "weld",
+                                                            "jsValue": "weld_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "wall",
+                                                            "usedVars": [
+                                                                "wall"
+                                                            ],
+                                                            "jsValue": "wall_"
+                                                        },
+                                                        {
+                                                            "name": "method",
+                                                            "value": "'break_weld'",
+                                                            "jsValue": "'break_weld'",
+                                                            "usedVars": []
+                                                        }
+                                                    ],
+                                                    "variable": ["weld"]
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-b9etn06s43a",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "query",
+                                                        "name": "Get"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "edges",
+                                                            "jsValue": "edges_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "ent_type_enum",
+                                                            "value": "'_e'",
+                                                            "jsValue": "'_e'",
+                                                            "usedVars": []
+                                                        },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "wall",
+                                                            "jsValue": "wall_",
+                                                            "usedVars": ["wall"]
+                                                        }
+                                                    ],
+                                                    "variable": ["edges"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-hp9uunyrv4",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "query",
+                                                        "name": "Get"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "pos",
+                                                            "jsValue": "pos_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "ent_type_enum",
+                                                            "value": "'ps'",
+                                                            "jsValue": "'ps'",
+                                                            "usedVars": []
+                                                        },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "edges",
+                                                            "jsValue": "edges_",
+                                                            "usedVars": [
+                                                                "edges"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "variable": ["pos"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-thj22by2sds",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "attrib",
+                                                        "name": "Get"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "coords",
+                                                            "jsValue": "coords_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "pos",
+                                                            "usedVars": ["pos"],
+                                                            "jsValue": "pos_"
+                                                        },
+                                                        {
+                                                            "name": "attrib",
+                                                            "value": "\"xyz\"",
+                                                            "usedVars": [],
+                                                            "jsValue": "\"xyz\""
+                                                        }
+                                                    ],
+                                                    "variable": ["coords"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-85y16oqkwu5",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "calc",
+                                                        "name": "Vector"
+                                                    },
+                                                    "argCount": 3,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "vecx",
+                                                            "jsValue": "vecx_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "edges[0]",
+                                                            "usedVars": [
+                                                                "edges"
+                                                            ],
+                                                            "jsValue": "edges_[pythonList(0, edges_.length)]"
+                                                        }
+                                                    ],
+                                                    "variable": ["vecx"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-ebu4ozzzvl5",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "calc",
+                                                        "name": "Normal"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "vec",
+                                                            "jsValue": "vec_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "wall",
+                                                            "usedVars": [
+                                                                "wall"
+                                                            ],
+                                                            "jsValue": "wall_"
+                                                        },
+                                                        {
+                                                            "name": "scale",
+                                                            "value": "1",
+                                                            "usedVars": [],
+                                                            "jsValue": "1"
+                                                        }
+                                                    ],
+                                                    "variable": ["vec"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-rsashh1hgf",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "calc",
+                                                        "name": "Centroid"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "loc",
+                                                            "jsValue": "loc_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "wall",
+                                                            "usedVars": [
+                                                                "wall"
+                                                            ],
+                                                            "jsValue": "wall_"
+                                                        },
+                                                        {
+                                                            "name": "method",
+                                                            "value": "'ps_average'",
+                                                            "jsValue": "'ps_average'",
+                                                            "usedVars": []
+                                                        }
+                                                    ],
+                                                    "variable": ["loc"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-kmfr2ba5k1",
+                                                    "enabled": false,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "visualize",
+                                                        "name": "Ray"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "vray",
+                                                            "jsValue": "vray_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "rays",
+                                                            "value": "rayMake(loc, vec, 4)",
+                                                            "usedVars": [
+                                                                "vec",
+                                                                "loc"
+                                                            ],
+                                                            "jsValue": "rayMake(__debug__, loc_, vec_, 4)"
+                                                        },
+                                                        {
+                                                            "name": "scale",
+                                                            "value": "1",
+                                                            "usedVars": [],
+                                                            "jsValue": "1"
+                                                        }
+                                                    ],
+                                                    "variable": ["vray"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-0axyoa0pbzg5",
+                                                    "enabled": false,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "visualize",
+                                                        "name": "Ray"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "vrayx",
+                                                            "jsValue": "vrayx_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "rays",
+                                                            "value": "rayMake(coords[0], vecx, 2)",
+                                                            "usedVars": [
+                                                                "coords",
+                                                                "vecx"
+                                                            ],
+                                                            "jsValue": "rayMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, 2)"
+                                                        },
+                                                        {
+                                                            "name": "scale",
+                                                            "value": "0.5",
+                                                            "usedVars": [],
+                                                            "jsValue": "0.5"
+                                                        }
+                                                    ],
+                                                    "variable": ["vrayx"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22",
+                                                    "ID": "prod-cxd1fj7s9y",
+                                                    "enabled": false,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "visualize",
+                                                        "name": "Plane"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "vplane",
+                                                            "jsValue": "vplane_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "planes",
+                                                            "value": "plnMake(coords[0], vecx, vecSub(coords[2], coords[0]))",
+                                                            "usedVars": [
+                                                                "coords",
+                                                                "vecx"
+                                                            ],
+                                                            "jsValue": "plnMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, vecSub(__debug__, coords_[pythonList(2, coords_.length)], coords_[pythonList(0, coords_.length)]))"
+                                                        },
+                                                        {
+                                                            "name": "scale",
+                                                            "value": "1",
+                                                            "usedVars": [],
+                                                            "jsValue": "1"
+                                                        }
+                                                    ],
+                                                    "variable": ["vplane"],
+                                                    "terminate": false
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-qqotly0rsu",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "modify",
+                                                        "name": "Scale"
+                                                    },
+                                                    "argCount": 5,
+                                                    "args": [
+                                                        { "name": "__none__" },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "entities",
+                                                            "usedVars": [
+                                                                "wall"
+                                                            ],
+                                                            "value": "wall",
+                                                            "jsValue": "wall_"
+                                                        },
+                                                        {
+                                                            "name": "plane",
+                                                            "usedVars": [
+                                                                "coords",
+                                                                "vecx"
+                                                            ],
+                                                            "value": "plnMake(coords[0], vecx, vecSub(coords[2], coords[0]))",
+                                                            "jsValue": "plnMake(__debug__, coords_[pythonList(0, coords_.length)], vecx_, vecSub(__debug__, coords_[pythonList(2, coords_.length)], coords_[pythonList(0, coords_.length)]))"
+                                                        },
+                                                        {
+                                                            "name": "scale",
+                                                            "usedVars": ["vec"],
+                                                            "value": "[remap(vecDot([1, 0, 0], vec), [0, 1], [0.25, 0.9]), 1, 1]",
+                                                            "jsValue": "[remap(__debug__, vecDot(__debug__, [1, 0, 0], vec_), [0, 1], [0.25, 0.9]), 1, 1]"
+                                                        }
+                                                    ],
+                                                    "selectGeom": false,
+                                                    "terminate": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22"
+                                                }
+                                            ],
+                                            "variable": ["wall"]
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-co703413yk5",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "query",
+                                                "name": "Type"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "blah",
+                                                    "jsValue": "blah_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "[walls[0]#_e[0] , walls[0]#_e[1] ]",
+                                                    "usedVars": ["walls"],
+                                                    "jsValue": "[ __modules__.query.Get(__params__.model, '_e', walls_[pythonList(0, walls_.length)])[pythonList(0, __modules__.query.Get(__params__.model, '_e', walls_[pythonList(0, walls_.length)]).length)],  __modules__.query.Get(__params__.model, '_e', walls_[pythonList(0, walls_.length)])[pythonList(1, __modules__.query.Get(__params__.model, '_e', walls_[pythonList(0, walls_.length)]).length)]]"
+                                                },
+                                                {
+                                                    "name": "type_query_enum",
+                                                    "value": "'is_edge'",
+                                                    "jsValue": "'is_edge'",
+                                                    "usedVars": []
+                                                }
+                                            ],
+                                            "variable": ["blah"],
+                                            "terminate": false
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-4kv36hdnvam",
+                                            "enabled": false,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "modify",
+                                                "name": "Scale"
+                                            },
+                                            "argCount": 5,
+                                            "args": [
+                                                { "name": "__none__" },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "usedVars": ["walls"],
+                                                    "value": "walls",
+                                                    "jsValue": "walls_"
+                                                },
+                                                {
+                                                    "name": "plane",
+                                                    "usedVars": [],
+                                                    "value": "rayMake([0, 0, 0], [1, 0, 0])",
+                                                    "jsValue": "rayMake(__debug__, [0, 0, 0], [1, 0, 0])"
+                                                },
+                                                {
+                                                    "name": "scale",
+                                                    "usedVars": ["wall"],
+                                                    "value": "vecDot([1, 0, 0], vecNorm(wall))",
+                                                    "jsValue": "vecDot(__debug__, [1, 0, 0], vecNorm(__debug__, wall_))"
+                                                }
+                                            ],
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 8,
+                                            "ID": "prod-mjj1mckqlbp",
+                                            "enabled": true,
+                                            "print": false,
+                                            "meta": {
+                                                "module": "attrib",
+                                                "name": "Get"
+                                            },
+                                            "argCount": 4,
+                                            "args": [
+                                                {
+                                                    "name": "var_name",
+                                                    "value": "point",
+                                                    "jsValue": "point_"
+                                                },
+                                                { "name": "__model__" },
+                                                {
+                                                    "name": "entities",
+                                                    "value": "arc[0]",
+                                                    "usedVars": ["arc"],
+                                                    "jsValue": "arc_[pythonList(0, arc_.length)]"
+                                                },
+                                                {
+                                                    "name": "attrib",
+                                                    "value": "\"xyz\"",
+                                                    "usedVars": [],
+                                                    "jsValue": "\"xyz\""
+                                                }
+                                            ],
+                                            "variable": ["point"]
+                                        }
+                                    ],
+                                    "localFunc": [
+                                        {
+                                            "type": 13,
+                                            "ID": "local_func_blank",
+                                            "meta": {
+                                                "name": "",
+                                                "module": ""
+                                            },
+                                            "argCount": 0,
+                                            "args": [],
+                                            "print": false,
+                                            "enabled": true,
+                                            "selectGeom": false
+                                        },
+                                        {
+                                            "type": 16,
+                                            "ID": "prod-is6zhj5gz8g",
+                                            "enabled": true,
+                                            "print": false,
+                                            "argCount": 2,
+                                            "meta": {
+                                                "module": "",
+                                                "name": "",
+                                                "otherInfo": {
+                                                    "prev_name": "LawCrv",
+                                                    "num_returns": 1,
+                                                    "collapsed": false
+                                                }
+                                            },
+                                            "args": [
+                                                {
+                                                    "name": "func_name",
+                                                    "value": "LawCrv",
+                                                    "jsValue": "LawCrv_"
+                                                },
+                                                {
+                                                    "name": "arg_1",
+                                                    "value": "t",
+                                                    "jsValue": "t_",
+                                                    "usedVars": ["t"]
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "type": 13,
+                                                    "ID": "prod-is6zhj5gz8g-blank",
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~1",
+                                                    "meta": {
+                                                        "name": "",
+                                                        "module": ""
+                                                    },
+                                                    "argCount": 0,
+                                                    "args": [],
+                                                    "print": false,
+                                                    "enabled": true,
+                                                    "selectGeom": false
+                                                },
+                                                {
+                                                    "type": 17,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~1",
+                                                    "ID": "prod-jazwxpsd7",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 1,
+                                                    "args": [
+                                                        {
+                                                            "name": "Value",
+                                                            "value": "cos(t)",
+                                                            "usedVars": ["t"],
+                                                            "jsValue": "cos(__debug__, t_)"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "variable": null
+                                        },
+                                        {
+                                            "type": 16,
+                                            "ID": "prod-otqehaqvkpe",
+                                            "enabled": true,
+                                            "print": false,
+                                            "argCount": 3,
+                                            "meta": {
+                                                "module": "",
+                                                "name": "",
+                                                "otherInfo": {
+                                                    "prev_name": "perp",
+                                                    "num_returns": 0,
+                                                    "collapsed": false
+                                                }
+                                            },
+                                            "args": [
+                                                {
+                                                    "name": "func_name",
+                                                    "value": "perp",
+                                                    "jsValue": "perp_"
+                                                },
+                                                {
+                                                    "name": "arg_1",
+                                                    "value": "vec",
+                                                    "jsValue": "vec_",
+                                                    "usedVars": ["vec"]
+                                                },
+                                                {
+                                                    "name": "arg_2",
+                                                    "value": "z",
+                                                    "jsValue": "z_",
+                                                    "usedVars": ["z"]
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "type": 13,
+                                                    "ID": "prod-otqehaqvkpe-blank",
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~2",
+                                                    "meta": {
+                                                        "name": "",
+                                                        "module": ""
+                                                    },
+                                                    "argCount": 0,
+                                                    "args": [],
+                                                    "print": false,
+                                                    "enabled": true,
+                                                    "selectGeom": false
+                                                },
+                                                {
+                                                    "type": 0,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~2",
+                                                    "ID": "prod-nunzwcaaux",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 2,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "perpendiculars",
+                                                            "jsValue": "perpendiculars_"
+                                                        },
+                                                        {
+                                                            "name": "value",
+                                                            "value": "vecCross(vec, z)",
+                                                            "usedVars": [
+                                                                "vec",
+                                                                "z"
+                                                            ],
+                                                            "jsValue": "vecCross(__debug__, vec_, z_)"
+                                                        }
+                                                    ],
+                                                    "variable": [
+                                                        "perpendiculars"
+                                                    ]
+                                                }
+                                            ],
+                                            "variable": null
+                                        },
+                                        {
+                                            "type": 16,
+                                            "ID": "prod-qru7oydhagt",
+                                            "enabled": true,
+                                            "print": false,
+                                            "argCount": 4,
+                                            "meta": {
+                                                "module": "",
+                                                "name": "",
+                                                "otherInfo": {
+                                                    "prev_name": "GetOffset",
+                                                    "num_returns": 1,
+                                                    "collapsed": false
+                                                }
+                                            },
+                                            "args": [
+                                                {
+                                                    "name": "func_name",
+                                                    "value": "GetOffset",
+                                                    "jsValue": "GetOffset_"
+                                                },
+                                                {
+                                                    "name": "arg_1",
+                                                    "value": "angle",
+                                                    "jsValue": "angle_",
+                                                    "usedVars": ["angle"]
+                                                },
+                                                {
+                                                    "name": "arg_2",
+                                                    "value": "num_und",
+                                                    "jsValue": "num_und_",
+                                                    "usedVars": ["num_und"]
+                                                },
+                                                {
+                                                    "name": "arg_3",
+                                                    "value": "und_depth",
+                                                    "jsValue": "und_depth_",
+                                                    "usedVars": ["und_depth"]
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "type": 13,
+                                                    "ID": "prod-qru7oydhagt-blank",
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~3",
+                                                    "meta": {
+                                                        "name": "",
+                                                        "module": ""
+                                                    },
+                                                    "argCount": 0,
+                                                    "args": [],
+                                                    "print": false,
+                                                    "enabled": true,
+                                                    "selectGeom": false
+                                                },
+                                                {
+                                                    "type": 18,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~3",
+                                                    "ID": "prod-ejy21hcy0m5",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 2,
+                                                    "meta": {
+                                                        "module": "localFunc",
+                                                        "name": "LawCrv"
+                                                    },
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "lc",
+                                                            "jsValue": "lc_"
+                                                        },
+                                                        {
+                                                            "name": "t",
+                                                            "value": "remap(angle, [0, 90], [0, 2 * PI * num_und])",
+                                                            "usedVars": [
+                                                                "angle",
+                                                                "num_und"
+                                                            ],
+                                                            "jsValue": "remap(__debug__, angle_, [0, 90], [0, 2 * JSON.parse(JSON.stringify(PI)) * num_und_])"
+                                                        }
+                                                    ],
+                                                    "variable": ["lc"],
+                                                    "selectGeom": false
+                                                },
+                                                {
+                                                    "type": 0,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~3",
+                                                    "ID": "prod-plohxllvxw",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 2,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "displacement",
+                                                            "jsValue": "displacement_"
+                                                        },
+                                                        {
+                                                            "name": "value",
+                                                            "value": "remap(lc, [-1, 1], [und_depth, 0])",
+                                                            "usedVars": [
+                                                                "lc",
+                                                                "und_depth"
+                                                            ],
+                                                            "jsValue": "remap(__debug__, lc_, [-1, 1], [und_depth_, 0])"
+                                                        }
+                                                    ],
+                                                    "variable": [
+                                                        "displacement"
+                                                    ],
+                                                    "selectGeom": false
+                                                },
+                                                {
+                                                    "type": 17,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~3",
+                                                    "ID": "prod-zubbou6zg4",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 1,
+                                                    "args": [
+                                                        {
+                                                            "name": "Value",
+                                                            "value": "displacement",
+                                                            "usedVars": [
+                                                                "displacement"
+                                                            ],
+                                                            "jsValue": "displacement_"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "variable": null
+                                        },
+                                        {
+                                            "type": 16,
+                                            "ID": "prod-i4kiz1pxuz",
+                                            "enabled": true,
+                                            "print": false,
+                                            "argCount": 3,
+                                            "meta": {
+                                                "module": "",
+                                                "name": "",
+                                                "otherInfo": {
+                                                    "prev_name": "vecFromPoly",
+                                                    "num_returns": 1,
+                                                    "collapsed": false
+                                                }
+                                            },
+                                            "args": [
+                                                {
+                                                    "name": "func_name",
+                                                    "value": "vecFromPoly",
+                                                    "jsValue": "vecFromPoly_"
+                                                },
+                                                {
+                                                    "name": "arg_1",
+                                                    "value": "poly",
+                                                    "jsValue": "poly_",
+                                                    "usedVars": ["poly"]
+                                                },
+                                                {
+                                                    "name": "arg_2",
+                                                    "value": "direction",
+                                                    "jsValue": "direction_",
+                                                    "usedVars": ["direction"]
+                                                }
+                                            ],
+                                            "children": [
+                                                {
+                                                    "type": 13,
+                                                    "ID": "prod-i4kiz1pxuz-blank",
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4",
+                                                    "meta": {
+                                                        "name": "",
+                                                        "module": ""
+                                                    },
+                                                    "argCount": 0,
+                                                    "args": [],
+                                                    "print": false,
+                                                    "enabled": true,
+                                                    "selectGeom": false
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-bau4juw5i6l",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "query",
+                                                        "name": "Get"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "edges",
+                                                            "jsValue": "edges_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "ent_type_enum",
+                                                            "value": "'_e'",
+                                                            "jsValue": "'_e'",
+                                                            "usedVars": []
+                                                        },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "poly",
+                                                            "jsValue": "poly_",
+                                                            "usedVars": ["poly"]
+                                                        }
+                                                    ],
+                                                    "variable": ["edges"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-bnadaekhac9",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "query",
+                                                        "name": "Get"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "positions",
+                                                            "jsValue": "positions_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "ent_type_enum",
+                                                            "value": "'ps'",
+                                                            "jsValue": "'ps'",
+                                                            "usedVars": []
+                                                        },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "edges",
+                                                            "jsValue": "edges_",
+                                                            "usedVars": [
+                                                                "edges"
+                                                            ]
+                                                        }
+                                                    ],
+                                                    "variable": ["positions"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4"
+                                                },
+                                                {
+                                                    "type": 8,
+                                                    "ID": "prod-0l3r1xqo7tv",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "meta": {
+                                                        "module": "attrib",
+                                                        "name": "Get"
+                                                    },
+                                                    "argCount": 4,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "points",
+                                                            "jsValue": "points_"
+                                                        },
+                                                        { "name": "__model__" },
+                                                        {
+                                                            "name": "entities",
+                                                            "value": "positions",
+                                                            "usedVars": [
+                                                                "positions"
+                                                            ],
+                                                            "jsValue": "positions_"
+                                                        },
+                                                        {
+                                                            "name": "attrib",
+                                                            "value": "\"xyz\"",
+                                                            "usedVars": [],
+                                                            "jsValue": "\"xyz\""
+                                                        }
+                                                    ],
+                                                    "variable": ["points"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4"
+                                                },
+                                                {
+                                                    "type": 0,
+                                                    "ID": "prod-70spwpfp24d",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 2,
+                                                    "args": [
+                                                        {
+                                                            "name": "var_name",
+                                                            "value": "vec",
+                                                            "jsValue": "vec_"
+                                                        },
+                                                        {
+                                                            "name": "value",
+                                                            "value": "vecNorm(vecCross(vecSub(points[1], points[0]), vecSub(points[2], points[1])))",
+                                                            "usedVars": [
+                                                                "points"
+                                                            ],
+                                                            "jsValue": "vecNorm(__debug__, vecCross(__debug__, vecSub(__debug__, points_[pythonList(1, points_.length)], points_[pythonList(0, points_.length)]), vecSub(__debug__, points_[pythonList(2, points_.length)], points_[pythonList(1, points_.length)])))"
+                                                        }
+                                                    ],
+                                                    "variable": ["vec"],
+                                                    "selectGeom": false,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4"
+                                                },
+                                                {
+                                                    "type": 17,
+                                                    "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~localFunc~4",
+                                                    "ID": "prod-vravrlt394",
+                                                    "enabled": true,
+                                                    "print": false,
+                                                    "argCount": 1,
+                                                    "args": [
+                                                        {
+                                                            "name": "Value",
+                                                            "value": "vecMult(vec, direction / norm(direction))",
+                                                            "usedVars": [
+                                                                "vec",
+                                                                "direction"
+                                                            ],
+                                                            "jsValue": "vecMult(__debug__, vec_, direction_ / norm(__debug__, direction_))"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
+                                            "variable": null
+                                        }
+                                    ],
+                                    "state": {
+                                        "procedure": [],
+                                        "show_code": true,
+                                        "show_func": true,
+                                        "hasExecuted": true
+                                    },
+                                    "input": "~flowchart~nodes~0~output~edges~0~target",
+                                    "output": {
+                                        "name": "output",
+                                        "type": 1,
+                                        "edges": [
+                                            {
+                                                "source": "~flowchart~nodes~0~output~edges~0~target~parentNode~output",
+                                                "target": {
+                                                    "name": "input",
+                                                    "type": 0,
+                                                    "edges": [
+                                                        "~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0"
+                                                    ],
+                                                    "meta": {
+                                                        "mode": 0,
+                                                        "opts": {}
+                                                    },
+                                                    "parentNode": {
+                                                        "name": "End",
+                                                        "id": "node_muu2yxmn06s",
+                                                        "position": {
+                                                            "x": 5340,
+                                                            "y": 5400
+                                                        },
+                                                        "enabled": true,
+                                                        "type": "end",
+                                                        "procedure": [
+                                                            {
+                                                                "type": 13,
+                                                                "ID": "main_blank",
+                                                                "meta": {
+                                                                    "name": "",
+                                                                    "module": ""
+                                                                },
+                                                                "argCount": 0,
+                                                                "args": [],
+                                                                "print": false,
+                                                                "enabled": true,
+                                                                "selectGeom": false
+                                                            },
+                                                            {
+                                                                "type": 11,
+                                                                "ID": "Return",
+                                                                "meta": {
+                                                                    "name": "",
+                                                                    "module": ""
+                                                                },
+                                                                "argCount": 2,
+                                                                "args": [
+                                                                    {
+                                                                        "name": "__model__",
+                                                                        "value": "",
+                                                                        "jsValue": ""
+                                                                    },
+                                                                    {
+                                                                        "name": "value",
+                                                                        "value": "",
+                                                                        "jsValue": ""
+                                                                    }
+                                                                ],
+                                                                "print": false,
+                                                                "enabled": true,
+                                                                "terminate": false
+                                                            }
+                                                        ],
+                                                        "localFunc": [
+                                                            {
+                                                                "type": 13,
+                                                                "ID": "local_func_blank",
+                                                                "meta": {
+                                                                    "name": "",
+                                                                    "module": ""
+                                                                },
+                                                                "argCount": 0,
+                                                                "args": [],
+                                                                "print": false,
+                                                                "enabled": true,
+                                                                "selectGeom": false
+                                                            }
+                                                        ],
+                                                        "state": {
+                                                            "procedure": [],
+                                                            "show_code": true,
+                                                            "show_func": true,
+                                                            "hasExecuted": true
+                                                        },
+                                                        "input": "~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0~target",
+                                                        "output": {
+                                                            "name": "output",
+                                                            "type": 1,
+                                                            "edges": [],
+                                                            "meta": {
+                                                                "mode": 0
+                                                            },
+                                                            "parentNode": "~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0~target~parentNode"
+                                                        },
+                                                        "hasError": false,
+                                                        "model": 4
+                                                    }
+                                                },
+                                                "selected": false
+                                            }
+                                        ],
+                                        "meta": { "mode": 0 },
+                                        "parentNode": "~flowchart~nodes~0~output~edges~0~target~parentNode"
+                                    },
+                                    "hasError": false,
+                                    "model": 3
+                                }
+                            },
+                            "selected": false
+                        }
+                    ],
+                    "meta": { "mode": 0 },
+                    "parentNode": "~flowchart~nodes~0"
+                },
+                "hasError": false,
+                "model": 2
+            },
+            "~flowchart~nodes~0~output~edges~0~target~parentNode",
+            "~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0~target~parentNode"
+        ],
+        "edges": [
+            "~flowchart~nodes~0~output~edges~0",
+            "~flowchart~nodes~0~output~edges~0~target~parentNode~output~edges~0"
+        ],
+        "functions": [],
+        "ordered": true,
+        "last_updated": "2021-11-27T06:21:04.070Z"
+    },
+    "version": "0.8.11",
+    "settings": "{\"normals\":{\"show\":false,\"size\":5},\"axes\":{\"show\":true,\"size\":50},\"grid\":{\"show\":true,\"size\":500,\"pos_x\":0,\"pos_y\":0,\"pos_z\":0,\"pos\":{\"x\":0,\"y\":0,\"z\":0}},\"background\":{\"show\":true,\"background_set\":0},\"positions\":{\"show\":false,\"size\":7},\"tjs_summary\":{\"show\":false},\"gi_summary\":{\"show\":false},\"wireframe\":{\"show\":false},\"camera\":{\"pos\":{\"x\":-79.99999999999991,\"y\":-79.99999999999994,\"z\":79.99999999999991},\"target\":{\"x\":0,\"y\":0,\"z\":0},\"ortho\":false,\"pos_x\":452.70077183931636,\"pos_y\":-912.2536880120044,\"pos_z\":768.7903824241532},\"colors\":{\"viewer_bg\":\"#E6E6E6\",\"position\":\"#000000\",\"position_s\":\"#0033FF\",\"vertex_s\":\"#FFCC00\",\"face_f\":\"#ffffff\",\"face_f_s\":\"#4949BD\",\"face_b\":\"#DDDDDD\",\"face_b_s\":\"#00006D\"},\"ambient_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":0.5},\"hemisphere_light\":{\"show\":true,\"helper\":false,\"skyColor\":\"#FFFFFF\",\"groundColor\":\"#FFFFFF\",\"intensity\":0.5},\"directional_light\":{\"show\":false,\"helper\":false,\"color\":\"#FFFFFF\",\"intensity\":1,\"shadow\":true,\"azimuth\":90,\"altitude\":45,\"distance\":10,\"type\":\"directional\",\"shadowSize\":3072},\"ground\":{\"show\":false,\"width\":1000,\"length\":1000,\"height\":-0.5,\"color\":\"#FFFFFF\",\"shininess\":0},\"select\":{\"selector\":{\"id\":7,\"name\":\"Polygons\"},\"tab\":\"0\",\"enabledselector\":{\"ps\":true,\"_v\":true,\"_e\":true,\"_w\":true,\"_f\":true,\"pt\":true,\"pl\":true,\"pg\":true,\"co\":true}},\"version\":\"0.4.38\",\"cesium\":{\"imagery\":{\"layer\":\"Open Street Map\",\"terrain\":\"Ellipsoid\",\"apiKey\":{\"here\":\"7vMRjLNCpcOAUQXU61eUp6EFbWCy7WLNmy9qLHO-1Bw\"}},\"camera\":{\"pos\":{\"x\":0,\"y\":0,\"z\":0},\"direction\":{\"x\":0,\"y\":0,\"z\":0},\"up\":{\"x\":0,\"y\":0,\"z\":0},\"right\":{\"x\":0,\"y\":0,\"z\":0}},\"updated\":true,\"time\":{\"date\":\"2020-05-11\"},\"model\":{\"polygonEdge\":true}},\"day_light\":{\"show\":true,\"helper\":false,\"intensity\":1,\"position\":[0,2000,1000],\"size\":1000},\"aframe\":{\"camera\":{\"position\":{\"x\":0,\"y\":5,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0},\"acceleration\":100,\"show_cam_info\":true},\"background\":{\"background_set\":1,\"background_url\":\"\",\"background_position\":{\"x\":0,\"y\":0,\"z\":0},\"background_rotation\":0},\"ambient_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":0.15},\"hemisphere_light\":{\"show\":true,\"skyColor\":\"#FFFFFF\",\"groundColor\":\"#FFFFFF\",\"intensity\":0.15,\"helper\":false},\"directional_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":1,\"azimuth\":90,\"altitude\":45,\"shadowSize\":2048,\"helper\":false,\"shadow\":true,\"distance\":10,\"type\":\"directional\"},\"ground\":{\"show\":false,\"width\":1000,\"length\":1000,\"height\":-0.5,\"color\":\"#FFFFFF\",\"shininess\":0},\"updated\":true,\"vr\":{\"background_url\":\"\",\"background_rotation\":0,\"foreground_url\":\"\",\"foreground_rotation\":0},\"vr_hotspot\":{\"background_url\":\"\",\"background_rotation\":0,\"foreground_url\":\"\",\"foreground_rotation\":0}},\"geo\":{\"imagery\":{\"layer\":\"Open Street Map\",\"terrain\":\"Ellipsoid\",\"apiKey\":{\"here\":\"7vMRjLNCpcOAUQXU61eUp6EFbWCy7WLNmy9qLHO-1Bw\"}},\"camera\":{\"pos\":{\"x\":-1527170.4564504684,\"y\":6191377.229851589,\"z\":142492.86697965642},\"direction\":{\"x\":0,\"y\":0,\"z\":0},\"up\":{\"x\":0,\"y\":0,\"z\":0},\"right\":{\"x\":0,\"y\":0,\"z\":0},\"rot\":{\"x\":-2.8946890807177175,\"y\":0.03332128705035884,\"z\":2.8868931928931136}},\"time\":{\"date\":\"2021-01-27T16:00\"},\"model\":{\"polygonEdge\":false},\"updated\":true}}"
+}
