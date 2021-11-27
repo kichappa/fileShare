@@ -1,17 +1,17 @@
 {
     "__filetype__": "mobius",
-    "name": "Untitled",
-    "author": "new_user",
+    "name": "Week 1 - Undulating Wall",
+    "author": "kichapps",
     "flowchart": {
         "id": "be8ea504-aca4-84a1-914a-11dc45b2b7fc",
-        "name": "Untitled",
+        "name": "Undulating Wall",
         "description": "",
         "language": "js",
         "meta": { "selected_nodes": [0] },
         "nodes": [
             {
                 "name": "Start",
-                "id": "node_u2ppbsh02sf",
+                "id": "node_nucobgh08lm",
                 "position": { "x": 5340, "y": 5000 },
                 "enabled": true,
                 "type": "start",
@@ -80,7 +80,7 @@
                                 "meta": { "mode": 0, "opts": {} },
                                 "parentNode": {
                                     "name": "Node",
-                                    "id": "node_b8zwlcw3hjg",
+                                    "id": "node_4zhyp80sjlx",
                                     "position": { "x": 5340, "y": 5200 },
                                     "enabled": true,
                                     "type": "",
@@ -1260,7 +1260,7 @@
                                                 {
                                                     "type": 8,
                                                     "ID": "prod-kmfr2ba5k1",
-                                                    "enabled": true,
+                                                    "enabled": false,
                                                     "print": false,
                                                     "meta": {
                                                         "module": "visualize",
@@ -1297,7 +1297,7 @@
                                                 {
                                                     "type": 8,
                                                     "ID": "prod-0axyoa0pbzg5",
-                                                    "enabled": true,
+                                                    "enabled": false,
                                                     "print": false,
                                                     "meta": {
                                                         "module": "visualize",
@@ -1335,7 +1335,7 @@
                                                     "type": 8,
                                                     "parent": "~flowchart~nodes~0~output~edges~0~target~parentNode~procedure~22",
                                                     "ID": "prod-cxd1fj7s9y",
-                                                    "enabled": true,
+                                                    "enabled": false,
                                                     "print": false,
                                                     "meta": {
                                                         "module": "visualize",
@@ -1365,7 +1365,8 @@
                                                             "jsValue": "1"
                                                         }
                                                     ],
-                                                    "variable": ["vplane"]
+                                                    "variable": ["vplane"],
+                                                    "terminate": false
                                                 },
                                                 {
                                                     "type": 8,
@@ -2028,7 +2029,7 @@
                                                     },
                                                     "parentNode": {
                                                         "name": "End",
-                                                        "id": "node_wmyukn34d6",
+                                                        "id": "node_wd6za5hcv18",
                                                         "position": {
                                                             "x": 5340,
                                                             "y": 5400
@@ -2137,8 +2138,8 @@
         ],
         "functions": [],
         "ordered": true,
-        "last_updated": "2021-11-27T06:06:41.330Z"
+        "last_updated": "2021-11-27T06:10:53.514Z"
     },
     "version": "0.8.11",
-    "settings": "{\"normals\":{\"show\":false,\"size\":5},\"axes\":{\"show\":true,\"size\":50},\"grid\":{\"show\":true,\"size\":500,\"pos_x\":0,\"pos_y\":0,\"pos_z\":0,\"pos\":{\"x\":0,\"y\":0,\"z\":0}},\"background\":{\"show\":true,\"background_set\":0},\"positions\":{\"show\":true,\"size\":2.6},\"tjs_summary\":{\"show\":false},\"gi_summary\":{\"show\":false},\"wireframe\":{\"show\":false},\"camera\":{\"pos\":{\"x\":-88.7075311103503,\"y\":-134.61135228735236,\"z\":95.1512864200749},\"target\":{\"x\":0,\"y\":16.666667938232422,\"z\":5},\"ortho\":false,\"pos_x\":452.70077183931636,\"pos_y\":-912.2536880120044,\"pos_z\":768.7903824241532},\"colors\":{\"viewer_bg\":\"#E6E6E6\",\"position\":\"#000000\",\"position_s\":\"#0033FF\",\"vertex_s\":\"#FFCC00\",\"face_f\":\"#FFFFFF\",\"face_f_s\":\"#4949BD\",\"face_b\":\"#DDDDDD\",\"face_b_s\":\"#00006D\"},\"ambient_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":0.5},\"hemisphere_light\":{\"show\":true,\"helper\":false,\"skyColor\":\"#FFFFFF\",\"groundColor\":\"#FFFFFF\",\"intensity\":0.5},\"directional_light\":{\"show\":false,\"helper\":false,\"color\":\"#FFFFFF\",\"intensity\":1,\"shadow\":true,\"azimuth\":90,\"altitude\":45,\"distance\":10,\"type\":\"directional\",\"shadowSize\":3072},\"ground\":{\"show\":false,\"width\":1000,\"length\":1000,\"height\":-0.5,\"color\":\"#FFFFFF\",\"shininess\":0},\"select\":{\"selector\":{\"id\":0,\"name\":\"Positions\"},\"tab\":\"0\",\"enabledselector\":{\"ps\":true,\"_v\":true,\"_e\":true,\"_w\":true,\"_f\":true,\"pt\":true,\"pl\":true,\"pg\":true,\"co\":true}},\"version\":\"0.4.38\",\"cesium\":{\"imagery\":{\"layer\":\"Open Street Map\",\"terrain\":\"Ellipsoid\",\"apiKey\":{\"here\":\"7vMRjLNCpcOAUQXU61eUp6EFbWCy7WLNmy9qLHO-1Bw\"}},\"camera\":{\"pos\":{\"x\":0,\"y\":0,\"z\":0},\"direction\":{\"x\":0,\"y\":0,\"z\":0},\"up\":{\"x\":0,\"y\":0,\"z\":0},\"right\":{\"x\":0,\"y\":0,\"z\":0}},\"updated\":true,\"time\":{\"date\":\"2020-05-11\"},\"model\":{\"polygonEdge\":true}},\"day_light\":{\"show\":true,\"helper\":false,\"intensity\":1,\"position\":[0,2000,1000],\"size\":1000},\"aframe\":{\"camera\":{\"position\":{\"x\":0,\"y\":5,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0},\"acceleration\":444,\"show_cam_info\":true},\"background\":{\"background_set\":1,\"background_url\":\"\",\"background_position\":{\"x\":0,\"y\":0,\"z\":0},\"background_rotation\":0},\"ambient_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":0.15},\"hemisphere_light\":{\"show\":true,\"skyColor\":\"#FFFFFF\",\"groundColor\":\"#FFFFFF\",\"intensity\":0.15,\"helper\":false},\"directional_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":1,\"azimuth\":90,\"altitude\":45,\"shadowSize\":2048,\"helper\":false,\"shadow\":true,\"distance\":10,\"type\":\"directional\"},\"ground\":{\"show\":false,\"width\":1000,\"length\":1000,\"height\":-0.5,\"color\":\"#FFFFFF\",\"shininess\":0},\"updated\":true,\"vr\":{\"background_url\":\"\",\"background_rotation\":0,\"foreground_url\":\"\",\"foreground_rotation\":0},\"vr_hotspot\":{\"background_url\":\"\",\"background_rotation\":0,\"foreground_url\":\"\",\"foreground_rotation\":0}},\"geo\":{\"imagery\":{\"layer\":\"Open Street Map\",\"terrain\":\"Ellipsoid\",\"apiKey\":{\"here\":\"7vMRjLNCpcOAUQXU61eUp6EFbWCy7WLNmy9qLHO-1Bw\"}},\"camera\":{\"pos\":{\"x\":-1527170.4564504684,\"y\":6191377.229851589,\"z\":142492.86697965642},\"direction\":{\"x\":0,\"y\":0,\"z\":0},\"up\":{\"x\":0,\"y\":0,\"z\":0},\"right\":{\"x\":0,\"y\":0,\"z\":0},\"rot\":{\"x\":-2.8946890807177175,\"y\":0.03332128705035884,\"z\":2.8868931928931136}},\"time\":{\"date\":\"2021-01-27T16:00\"},\"model\":{\"polygonEdge\":false},\"updated\":true}}"
+    "settings": "{\"normals\":{\"show\":false,\"size\":5},\"axes\":{\"show\":true,\"size\":50},\"grid\":{\"show\":true,\"size\":500,\"pos_x\":0,\"pos_y\":0,\"pos_z\":0,\"pos\":{\"x\":0,\"y\":0,\"z\":0}},\"background\":{\"show\":true,\"background_set\":0},\"positions\":{\"show\":false,\"size\":4.3},\"tjs_summary\":{\"show\":false},\"gi_summary\":{\"show\":false},\"wireframe\":{\"show\":false},\"camera\":{\"pos\":{\"x\":-21.27515093656342,\"y\":-24.539539646262075,\"z\":34.99703834877228},\"target\":{\"x\":0,\"y\":0,\"z\":10},\"ortho\":false,\"pos_x\":452.70077183931636,\"pos_y\":-912.2536880120044,\"pos_z\":768.7903824241532},\"colors\":{\"viewer_bg\":\"#E6E6E6\",\"position\":\"#000000\",\"position_s\":\"#0033FF\",\"vertex_s\":\"#FFCC00\",\"face_f\":\"#FFFFFF\",\"face_f_s\":\"#4949BD\",\"face_b\":\"#DDDDDD\",\"face_b_s\":\"#00006D\"},\"ambient_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":0.5},\"hemisphere_light\":{\"show\":true,\"helper\":false,\"skyColor\":\"#FFFFFF\",\"groundColor\":\"#FFFFFF\",\"intensity\":0.5},\"directional_light\":{\"show\":false,\"helper\":false,\"color\":\"#FFFFFF\",\"intensity\":1,\"shadow\":true,\"azimuth\":90,\"altitude\":45,\"distance\":10,\"type\":\"directional\",\"shadowSize\":3072},\"ground\":{\"show\":false,\"width\":1000,\"length\":1000,\"height\":-0.5,\"color\":\"#FFFFFF\",\"shininess\":0},\"select\":{\"selector\":{\"id\":7,\"name\":\"Polygons\"},\"tab\":\"0\",\"enabledselector\":{\"ps\":true,\"_v\":true,\"_e\":true,\"_w\":true,\"_f\":true,\"pt\":true,\"pl\":true,\"pg\":true,\"co\":true}},\"version\":\"0.4.38\",\"cesium\":{\"imagery\":{\"layer\":\"Open Street Map\",\"terrain\":\"Ellipsoid\",\"apiKey\":{\"here\":\"7vMRjLNCpcOAUQXU61eUp6EFbWCy7WLNmy9qLHO-1Bw\"}},\"camera\":{\"pos\":{\"x\":0,\"y\":0,\"z\":0},\"direction\":{\"x\":0,\"y\":0,\"z\":0},\"up\":{\"x\":0,\"y\":0,\"z\":0},\"right\":{\"x\":0,\"y\":0,\"z\":0}},\"updated\":true,\"time\":{\"date\":\"2020-05-11\"},\"model\":{\"polygonEdge\":true}},\"day_light\":{\"show\":true,\"helper\":false,\"intensity\":1,\"position\":[0,2000,1000],\"size\":1000},\"aframe\":{\"camera\":{\"position\":{\"x\":0,\"y\":5,\"z\":0},\"rotation\":{\"x\":0,\"y\":0,\"z\":0},\"acceleration\":444,\"show_cam_info\":true},\"background\":{\"background_set\":1,\"background_url\":\"\",\"background_position\":{\"x\":0,\"y\":0,\"z\":0},\"background_rotation\":0},\"ambient_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":0.15},\"hemisphere_light\":{\"show\":true,\"skyColor\":\"#FFFFFF\",\"groundColor\":\"#FFFFFF\",\"intensity\":0.15,\"helper\":false},\"directional_light\":{\"show\":true,\"color\":\"#FFFFFF\",\"intensity\":1,\"azimuth\":90,\"altitude\":45,\"shadowSize\":2048,\"helper\":false,\"shadow\":true,\"distance\":10,\"type\":\"directional\"},\"ground\":{\"show\":false,\"width\":1000,\"length\":1000,\"height\":-0.5,\"color\":\"#FFFFFF\",\"shininess\":0},\"updated\":true,\"vr\":{\"background_url\":\"\",\"background_rotation\":0,\"foreground_url\":\"\",\"foreground_rotation\":0},\"vr_hotspot\":{\"background_url\":\"\",\"background_rotation\":0,\"foreground_url\":\"\",\"foreground_rotation\":0}},\"geo\":{\"imagery\":{\"layer\":\"Open Street Map\",\"terrain\":\"Ellipsoid\",\"apiKey\":{\"here\":\"7vMRjLNCpcOAUQXU61eUp6EFbWCy7WLNmy9qLHO-1Bw\"}},\"camera\":{\"pos\":{\"x\":-1527170.4564504684,\"y\":6191377.229851589,\"z\":142492.86697965642},\"direction\":{\"x\":0,\"y\":0,\"z\":0},\"up\":{\"x\":0,\"y\":0,\"z\":0},\"right\":{\"x\":0,\"y\":0,\"z\":0},\"rot\":{\"x\":-2.8946890807177175,\"y\":0.03332128705035884,\"z\":2.8868931928931136}},\"time\":{\"date\":\"2021-01-27T16:00\"},\"model\":{\"polygonEdge\":false},\"updated\":true}}"
 }
